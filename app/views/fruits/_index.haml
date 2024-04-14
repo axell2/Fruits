@@ -1,0 +1,29 @@
+%h1 Listing fruits
+= link_to "Add fruit", new_fruit_path,class:"nav-link active",class:"btn btn-primary mt-3 mb-2"
+%br/
+%table.table
+  %thead
+    %tr
+      %th Name
+      %th Color
+      %th Origin
+      %th Season
+      %th Price
+      %th User
+      %th
+      %th
+      %th
+
+  %tbody
+    - @fruits.each do |fruit|
+      %tr
+        %td= fruit.name
+        %td= fruit.color
+        %td= fruit.origin
+        %td= fruit.season
+        %td= fruit.price
+        %td= fruit.user.email
+        %td= link_to 'Show', fruit, class:"btn btn-success"
+        %td= link_to 'Edit', edit_fruit_path(fruit),class:"btn btn-warning"
+        %td= link_to 'Destroy', fruit, data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } ,class:"btn btn-danger"
+

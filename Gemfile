@@ -4,7 +4,12 @@ ruby "3.2.2"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.3"
-
+#for process sass css files 
+gem "sassc-rails"
+#devise for authentications
+gem 'devise'
+#haml for better html and clean code
+gem 'haml-rails'
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 

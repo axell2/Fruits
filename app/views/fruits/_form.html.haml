@@ -1,0 +1,26 @@
+= form_for @fruit do |f|
+  - if @fruit.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@fruit.errors.count, "error")} prohibited this fruit from being saved:"
+      %ul
+        - @fruit.errors.full_messages.each do |message|
+          %li= message
+
+  .field
+    = f.label :name
+    = f.text_field :name,class:"form-control"
+  .field
+    = f.label :color
+    = f.text_field :color,class:"form-control"
+  .field
+    = f.label :origin
+    = f.text_field :origin,class:"form-control"
+  .field
+    = f.label :season
+    = f.text_field :season,class:"form-control"
+  .field
+    = f.label :price
+    = f.text_field :price,class:"form-control"
+    %br/
+  .actions
+    = f.submit 'Save',class:"btn btn-primary"

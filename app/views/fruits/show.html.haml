@@ -1,0 +1,24 @@
+.row.justify-content-center
+  .col-md-6.white
+    %p
+      %b Name:
+      = @fruit.name
+    %p
+      %b Color:
+      = @fruit.color
+    %p
+      %b Origin:
+      = @fruit.origin
+    %p
+      %b Season:
+      = @fruit.season
+    %p
+      %b Price:
+      = @fruit.price
+    %p
+      %b User:
+      = @fruit.user.email
+
+    = link_to 'Edit', edit_fruit_path(@fruit)
+    \|
+    = link_to 'Back', fruits_path
